@@ -2,47 +2,47 @@ using UnityEditor;
 using UnityEngine;
 
 namespace Editor{
-    [CustomEditor(typeof(TextPanelInteractor))]
-    public class TextPanelInteractorEditor : UnityEditor.Editor
+    [CustomEditor(typeof(TextInteractor))]
+    public class TextInteractorEditor : UnityEditor.Editor
     {
         public override void OnInspectorGUI()
         {
-            TextPanelInteractor textPanelInteractor = target as TextPanelInteractor;
-            if (textPanelInteractor == null) return;
+            TextInteractor textInteractor = target as TextInteractor;
+            if (textInteractor == null) return;
             if (GUILayout.Button("Update Text"))
             {
                 Debug.Log("Updating text, please wait...");
-                textPanelInteractor.UpdateText();
+                textInteractor.UpdateText();
             }
             if (GUILayout.Button("Add Model"))
             {
-                if (ModelExists(textPanelInteractor))
+                if (ModelExists(textInteractor))
                 {
                     Debug.LogWarning("Models Detected, please remove them first");
                 }
                 else
                 {
                     Debug.Log("Creating model, please wait...");
-                    InstantiatePrefab(textPanelInteractor);
+                    InstantiatePrefab(textInteractor);
                 }
             }
 
             if (GUILayout.Button("Delete Model"))
             {
-                if (!ModelExists(textPanelInteractor))
+                if (!ModelExists(textInteractor))
                 {
                     Debug.LogWarning("No Models Detected!");
                 }
                 else
                 {
-                    DeleteModels(textPanelInteractor);
+                    DeleteModels(textInteractor);
                 }
             }
 
             DrawDefaultInspector();
         }
         
-        private static bool ModelExists(TextPanelInteractor textPanelInteractor) 
+        private static bool ModelExists(TextInteractor textPanelInteractor) 
         {
             foreach (Transform child in textPanelInteractor.transform) {
                 if (!child.CompareTag($"TextPanel")) {
@@ -52,7 +52,7 @@ namespace Editor{
             return false;
         }
 
-        private static void DeleteModels(TextPanelInteractor textPanelInteractor)
+        private static void DeleteModels(TextInteractor textPanelInteractor)
         {
             foreach (Transform child in textPanelInteractor.transform) {
                 if (child.CompareTag($"TextPanel")) continue;
@@ -62,7 +62,7 @@ namespace Editor{
             }
         }
 
-        private static void InstantiatePrefab(TextPanelInteractor textPanelInteractor)
+        private static void InstantiatePrefab(TextInteractor textPanelInteractor)
         {
             if (textPanelInteractor.Model != null)
             {
