@@ -15,6 +15,7 @@ public class TextInteractor : InteractorMonobehaviour
     {
         textPanel.UpdateText(title, content);
     }
+
     protected override void TriggerInteraction(bool isEnteringTrigger)
     {
         textPanel.gameObject.SetActive(isEnteringTrigger);
