@@ -1,13 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
 
 public class TextPanelInteractor : MonoBehaviour
 {
-
-    
     [Tooltip("Place your model prefab here, and then click on the generate button!")] 
     public GameObject Model;
     
@@ -15,15 +10,20 @@ public class TextPanelInteractor : MonoBehaviour
     [Range(1, 40)] private float range = 5;
     [SerializeField] private string title;
     [SerializeField] [TextArea]private string content;
-    [SerializeField] private GameObject textPanel;
+    [SerializeField] private CanvasTextManager textPanel;
 
     private SphereCollider sphereCollider;
 
     private void OnEnable() 
     {
         sphereCollider = GetComponent<SphereCollider>();
-        textPanel.SetActive(false);
+        textPanel.gameObject.SetActive(false);
         UpdateText();
+    }
+
+    public void UpdateText()
+    {
+        textPanel.UpdateText(title, content);
     }
 
     private void OnValidate()
@@ -32,23 +32,13 @@ public class TextPanelInteractor : MonoBehaviour
         sphereCollider.radius = range;
     }
 
-    public void UpdateText()
-    {
-        if (textPanel == null)
-        {
-            textPanel = transform.GetChild(0).gameObject;
-        }
-        textPanel.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = title;
-        textPanel.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = content;
-    }
-
     private void OnTriggerEnter(Collider other)
     {
-        textPanel.SetActive(true);
+        textPanel.gameObject.SetActive(true);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        textPanel.SetActive(false);
+        textPanel.gameObject.SetActive(false);
     }
 }
