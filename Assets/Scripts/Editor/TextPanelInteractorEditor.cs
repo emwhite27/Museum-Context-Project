@@ -14,6 +14,7 @@ namespace Editor{
                 Debug.Log("Updating text, please wait...");
                 textInteractor.UpdateText();
             }
+            GUILayout.Space(5);
             if (GUILayout.Button("Add Model"))
             {
                 if (ModelExists(textInteractor))
@@ -26,7 +27,7 @@ namespace Editor{
                     InstantiatePrefab(textInteractor);
                 }
             }
-
+            GUILayout.Space(5);
             if (GUILayout.Button("Delete Model"))
             {
                 if (!ModelExists(textInteractor))
@@ -38,7 +39,7 @@ namespace Editor{
                     DeleteModels(textInteractor);
                 }
             }
-
+            GUILayout.Space(5);
             DrawDefaultInspector();
         }
         
