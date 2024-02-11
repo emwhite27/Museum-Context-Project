@@ -11,10 +11,7 @@ public class InteractorMonobehaviour : MonoBehaviour
 
     private SphereCollider sphereCollider;
     
-    protected virtual void TriggerInteraction(bool isEnteringTrigger)
-    {
-        
-    }
+    protected virtual void TriggerInteraction(bool isEnteringTrigger){}
 
     private void OnEnable()
     {
