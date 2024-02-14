@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/BaseWorld_Character.unity
-    guid: bfc3822f4bec1504fb20189d48b74db0
+    path: Assets/Scenes/MuseumTest.unity
+    guid: b608ed4bcfc744e38a39ebd9a9dcbf59
   m_configObjects: {}
