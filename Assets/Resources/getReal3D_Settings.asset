@@ -17,5 +17,6 @@ MonoBehaviour:
   m_rpcLogLevel: -1
   m_ignoredErrors:
   - splashScreen
+  - build_target
   m_config: UBCO_FinalFinal-v2
   m_inputSystemController: 1
