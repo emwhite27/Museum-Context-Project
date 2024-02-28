@@ -3,7 +3,52 @@ guid: 2f0482a867a184d29b301b2ef510af69
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bottom_bar
+    second: {fileID: 2100000, guid: 772a675d222af4f11abd2eacc134c255, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dirty Mossy Large Tiles
+    second: {fileID: 2100000, guid: c339bff225b9f404187df7c681d27652, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Main_Body
+    second: {fileID: 2100000, guid: ae77dfec358b248359f52f30eec30609, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Posts1
+    second: {fileID: 2100000, guid: c76e42587639d4cb8b11e6447f95d860, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roof_connection1
+    second: {fileID: 2100000, guid: 27f17be01ecb14a9a8f436f5be7eca21, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roof_underneath
+    second: {fileID: 2100000, guid: 2824ed994e18e486798a16c5170f9610, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: large_dirtier_tile_moss_N
+    second: {fileID: 2800000, guid: e6eee3eb8ebc948b3b0282fb01c6b02c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: large_dirtier_tile_moss_R
+    second: {fileID: 2800000, guid: 75a29d1e289824f33b2e3dd86b9802b7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: large_dirtier_tile_moss_bc
+    second: {fileID: 2800000, guid: e79bac4a5eee64a0a967df1122b94066, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
